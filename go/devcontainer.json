@@ -13,11 +13,9 @@
 			"userUid": "automatic",
 			"userGid": "automatic"
         },
-        "ghcr.io/devcontainers/features/node:1": {
+        "ghcr.io/devcontainers/features/go:1": {
             "version":"latest",
-            "nodeGypDependencies":"false",
-            "nvmInstallPath":"/usr/local/share/nvm",
-            "nvmVersion":"latest"
+            "golangciLintVersion":"latest"
         },
         "ghcr.io/devcontainers/features/git:1": {
             "version": "latest",
@@ -29,9 +27,8 @@
 		"vscode": {
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"dbaeumer.vscode-eslint",
+				"golang.go",
 				"esbenp.prettier-vscode",
-        "ms-vscode.js-debug-companion",
 				"vscode-icons-team.vscode-icons"
 			]
 		}
