@@ -1,0 +1,53 @@
+{
+    "name":"Nodejs",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true,
+			"installOhMyZsh": true,
+			"installOhMyZshConfig": true,
+			"upgradePackages": true,
+			"username": "automatic",
+			"userUid": "automatic",
+			"userGid": "automatic"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version":"latest",
+            "nodeGypDependencies":"false",
+            "nvmInstallPath":"/usr/local/share/nvm",
+            "nvmVersion":"latest"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": "true"
+        }
+    },
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+        "ms-vscode.js-debug-companion",
+				"vscode-icons-team.vscode-icons"
+			]
+		}
+	},
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [8080],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "npm install -g npm@latest && npm run start",
+    // "postStartCommand":"nohup bash -c 'npm run dev &'",
+
+
+    
+    // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode",
+    // "workspaceFolder": "/home/vscode/nodejs-ubuntu",
+    // "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/nodejs-ubuntu,type=bind"
+}
